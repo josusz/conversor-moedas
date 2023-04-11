@@ -2,16 +2,26 @@
   <h1>Conversor de Moedas</h1>
   <div class="mb-3">
     <label for="valor" class="form-label">VALOR</label>
-    <input type="number" class="form-control" name="valor">
+    <input type="number" [(ngModel)]="valor" class="form-control" name="valor">
     <select name="real">
         <option value="real">REAL</option>
         <option value="dolar">DÓLAR</option>
         <option value="euro">EURO</option>
     </select>
   </div>
+  <br>
+  <div class="mb-3">
+    <label for="valor" class="form-label">O VALOR SERÁ CONVERTIDO EM</label>
+    <select name="real">
+        <option value="real">REAL</option>
+        <option value="dolar">DÓLAR</option>
+        <option value="euro">EURO</option>
+    </select>
+  </div>
+  <br>
   <div class="mb-3">
     <label for="valorConvertido" class="form-label">VALOR CONVERTIDO</label>
-    <output name="valorConvertido"></output>
+    <output [value]="valorConvertido" name="valorConvertido"></output>
   </div>
-  <button type="submit" class="btn-converter">Converter</button>
+  <button type="submit" class="btn-converter">CONVERTER</button>
 </form>
