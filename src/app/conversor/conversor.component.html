@@ -1,21 +1,21 @@
-<form>
+<form class="fieldset">
   <h1>Conversor de Moedas</h1>
   <div class="mb-3">
     <label for="valor" class="form-label">VALOR</label>
     <input type="number" [(ngModel)]="valor" class="form-control" name="valor">
-    <select name="moedaOrigem">
-        <option (ngModel)="moedaOrigem">REAL</option>
-        <option value="dolar">DÓLAR</option>
-        <option value="euro">EURO</option>
+    <select [(ngModel)]="moedaOrigem" name="moedaOrigem">
+        <option [ngValue]="'real'">REAL</option>
+        <option [ngValue]="'dolar'">DÓLAR</option>
+        <option [ngValue]="'euro'">EURO</option>
     </select>
   </div>
   <br>
   <div class="mb-3">
     <label for="moedaDestino" class="form-label">O VALOR SERÁ CONVERTIDO EM</label>
-    <select name="moedaDestino">
-        <option value="moedaDestino">REAL</option>
-        <option (ngModel)="moedaDestino">DÓLAR</option>
-        <option value="euro">EURO</option>
+    <select [(ngModel)]="moedaDestino" name="moedaDestino">
+        <option [ngValue]="'real'">REAL</option>
+        <option [ngValue]="'dolar'">DÓLAR</option>
+        <option [ngValue]="'euro'">EURO</option>
     </select>
   </div>
   <br>
