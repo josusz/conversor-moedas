@@ -1,4 +1,5 @@
 <div class="container text-center">
+  <br>
   <h1>Conversor de Moedas</h1>
   <br>
   <div class="input-group">
@@ -19,12 +20,14 @@
         <option [ngValue]="'euro'">EURO</option>
     </select>
     <span class="input-group-text">VALOR ATUAL</span>
-    <input type="number" [(ngModel)]="valor" class="form-control" name="valor">
+    <input type="number" [(ngModel)]="valorCambio" class="form-control" name="valor">
   </div>
   <br>
   <div class="mb-3">
-    <label for="valorConvertido" class="form-label">VALOR CONVERTIDO</label>
-    <output [value]="valorConvertido"></output>
   </div>
   <button type="submit" class="btn btn-success" (click)="converter()">CONVERTER</button>
+  <br>
+  <br>
+  <span class="input-group-text">RESULTADO DA CONVERSÃO</span>
+  <output [value]="valorConvertido" class="form-control border-success" ></output>
 </div>
