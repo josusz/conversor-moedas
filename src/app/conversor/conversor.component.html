@@ -3,25 +3,25 @@
   <div class="mb-3">
     <label for="valor" class="form-label">VALOR</label>
     <input type="number" [(ngModel)]="valor" class="form-control" name="valor">
-    <select name="real">
-        <option value="real">REAL</option>
+    <select name="moedaOrigem">
+        <option (ngModel)="moedaOrigem">REAL</option>
         <option value="dolar">DÓLAR</option>
         <option value="euro">EURO</option>
     </select>
   </div>
   <br>
   <div class="mb-3">
-    <label for="valor" class="form-label">O VALOR SERÁ CONVERTIDO EM</label>
-    <select name="real">
-        <option value="real">REAL</option>
-        <option value="dolar">DÓLAR</option>
+    <label for="moedaDestino" class="form-label">O VALOR SERÁ CONVERTIDO EM</label>
+    <select name="moedaDestino">
+        <option value="moedaDestino">REAL</option>
+        <option (ngModel)="moedaDestino">DÓLAR</option>
         <option value="euro">EURO</option>
     </select>
   </div>
   <br>
   <div class="mb-3">
     <label for="valorConvertido" class="form-label">VALOR CONVERTIDO</label>
-    <output [value]="valorConvertido" name="valorConvertido"></output>
+    <output [value]="valorConvertido"></output>
   </div>
-  <button type="submit" class="btn-converter">CONVERTER</button>
+  <button type="submit" class="btn-converter" (click)="converter()">CONVERTER</button>
 </form>
